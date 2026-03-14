@@ -56,17 +56,17 @@ module Legion
 
           def to_h
             {
-              id:              @id,
-              facet_type:      @facet_type,
-              domain:          @domain,
-              content:         @content,
-              brilliance:      @brilliance,
-              transparency:    @transparency,
-              angle:           @angle,
+              id:               @id,
+              facet_type:       @facet_type,
+              domain:           @domain,
+              content:          @content,
+              brilliance:       @brilliance,
+              transparency:     @transparency,
+              angle:            @angle,
               brilliance_label: brilliance_label,
-              dazzling:        dazzling?,
-              dark:            dark?,
-              created_at:      @created_at
+              dazzling:         dazzling?,
+              dark:             dark?,
+              created_at:       @created_at
             }
           end
 

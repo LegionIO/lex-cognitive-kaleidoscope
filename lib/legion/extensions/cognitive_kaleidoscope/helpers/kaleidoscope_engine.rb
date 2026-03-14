@@ -53,7 +53,7 @@ module Legion
           end
 
           def tarnish_all!
-            @facets.each_value { |f| f.tarnish! }
+            @facets.each_value(&:tarnish!)
           end
 
           def facets_by_type
@@ -100,13 +100,13 @@ module Legion
 
           def kaleidoscope_report
             {
-              total_facets:     @facets.size,
-              total_patterns:   @patterns.size,
-              by_type:          facets_by_type,
-              dazzling_count:   dazzling_facets.size,
-              dark_count:       dark_facets.size,
-              avg_brilliance:   avg_brilliance,
-              avg_complexity:   avg_complexity
+              total_facets:   @facets.size,
+              total_patterns: @patterns.size,
+              by_type:        facets_by_type,
+              dazzling_count: dazzling_facets.size,
+              dark_count:     dark_facets.size,
+              avg_brilliance: avg_brilliance,
+              avg_complexity: avg_complexity
             }
           end
 

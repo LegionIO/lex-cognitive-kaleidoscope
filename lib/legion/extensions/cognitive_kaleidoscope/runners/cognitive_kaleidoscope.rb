@@ -35,7 +35,7 @@ module Legion
 
           def rotate(facet_id: nil, pattern_id: nil, degrees: nil, engine: nil, **)
             eng = resolve_engine(engine)
-            deg = degrees || Constants::ROTATION_STEP * 360
+            deg = degrees || (Helpers::Constants::ROTATION_STEP * 360)
             if pattern_id
               p = eng.rotate_pattern(pattern_id: pattern_id, degrees: deg)
               { success: true, pattern: p.to_h }
